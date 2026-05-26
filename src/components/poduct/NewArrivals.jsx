@@ -178,14 +178,14 @@ const NewArrivals = () => {
 
           <div
             key={product._id}
-            className="min-w-[100%] sm:min-w-[48%] lg:min-w-[30%] relative overflow-hidden rounded-xl group cursor-pointer"
+            className="min-w-full sm:min-w-[48%] lg:min-w-[30%] relative overflow-hidden rounded-xl group cursor-pointer"
           >
 
             {/* Product Image */}
             <img
               src={product.images[0]?.url}
               alt={product.images[0]?.altText || product.name}
-              className="w-full h-[500px] object-cover rounded-xl transition-transform duration-700 group-hover:scale-110"
+              className="w-full h-125 object-cover rounded-xl transition-transform duration-700 group-hover:scale-110"
             />
 
             {/* Overlay */}
