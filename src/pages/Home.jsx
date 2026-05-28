@@ -4,6 +4,8 @@ import GenderCollection from '../components/poduct/GenderCollection'
 import NewArrivals from '../components/poduct/NewArrivals'
 import ProductDetails from '../components/poduct/ProductDetails'
 import ProductGrid from '../components/poduct/ProductGrid'
+import FeaturedCollection from '../components/poduct/FeaturedCollection'
+import FeaturedSection from '../components/poduct/FeaturedSection'
  
 
 const  placeholderProducts =[
@@ -70,6 +72,8 @@ function Home() {
           <h2 className='text-3xl text-center font-bold mb-4'> top wear for women </h2>
           <ProductGrid products={placeholderProducts}/>
         </div>
+        <FeaturedCollection/>
+        <FeaturedSection/>
     </div>
   )
 }
