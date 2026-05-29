@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { CgProfile } from "react-icons/cg";
 import { FaShoppingBag, FaBars } from "react-icons/fa";
 import { IoMdCloseCircle } from "react-icons/io";
+import { GrUserAdmin } from "react-icons/gr";
 
 import SearchBar from './SearchBar';
 import CartDrawer from '../layout/CartDrawer';
@@ -71,6 +72,10 @@ function Navbar() {
 
                 {/* Right Icons */}
                 <div className='flex items-center space-x-5'>
+                    {/* admin */}
+                    <Link to='/admin' className='hover:text-black'>
+                        <GrUserAdmin className='h-7 w-7 text-gray-600' />
+                    </Link>
 
                     {/* Profile */}
                     <Link to='/profile' className='hover:text-black'>
