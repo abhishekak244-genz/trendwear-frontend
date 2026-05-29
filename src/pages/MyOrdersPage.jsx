@@ -1,9 +1,11 @@
 import React from 'react'
 import { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 function MyOrdersPage() {
     const [orders, setOrders] = useState([]);
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate()
     useEffect(() => {
         // Simulate API Fetch
         setTimeout(() => {
@@ -50,6 +52,10 @@ function MyOrdersPage() {
             setLoading(false);
         }, 1000);
     }, []);
+
+    const handleRowClick = (orderId) =>{
+      navigate(`/order/${orderId}`)
+    }
 
     return (
         <div className="max-w-7xl mx-auto p-4 sm:p-6">
@@ -126,6 +132,7 @@ function MyOrdersPage() {
 
                                 <tr
                                     key={order._id}
+                                    onClick={() => handleRowClick(order._id)}
                                     className="border-b hover:bg-gray-50 transition"
                                 >
 
